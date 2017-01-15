@@ -1,0 +1,20 @@
+{
+  "name": "Slide Generator",
+  "description": "",
+  "details": "This power up allows you to transform your cards and lists into slides for presentations",
+  "icon": {
+    "url": "./images/logo.png"
+  },
+  "author": "Alex Onorati",
+  "capabilities": [
+    "attachment-sections"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "./index.html"
+    }
+  },
+  "recommend": {
+    "urls": []
+  }
+}

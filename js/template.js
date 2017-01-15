@@ -193,7 +193,7 @@ TrelloPowerUp.initialize({
   'board-buttons': function(t, options){
     return [{
       icon: WHITE_ICON,
-      text: 'Generate ',
+      text: 'Generate',
       callback: boardButtonCallback
     }];
   },

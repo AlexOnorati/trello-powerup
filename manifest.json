@@ -7,7 +7,10 @@
   },
   "author": "Alex Onorati",
   "capabilities": [
-    "attachment-sections"
+    "board-buttons",
+    "card-badges",
+    "card-detail-badges",
+    "card-buttons"
   ],
   "connectors": {
     "iframe": {

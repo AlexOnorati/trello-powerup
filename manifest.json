@@ -7,7 +7,7 @@
   },
   "author": "Alex Onorati",
   "capabilities": [
-    
+    "board-buttons"
   ],
   "connectors": {
     "iframe": {

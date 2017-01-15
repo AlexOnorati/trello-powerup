@@ -80,7 +80,8 @@ var formatNPSUrl = function(t, url){
 };
 
 var boardButtonCallback = function(t){
-  return t.popup({
+  alert('Slides!');
+  /*return t.popup({
     title: 'Popup List Example',
     items: [
       {
@@ -108,7 +109,7 @@ var boardButtonCallback = function(t){
         }
       }
     ]
-  });
+  });*/
 };
 
 var cardButtonCallback = function(t){

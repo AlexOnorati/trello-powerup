@@ -1,6 +1,6 @@
 /* global TrelloPowerUp */
 
-var WHITE_ICON = './images/logo.png';
+var WHITE_ICON = './images/icon-gray.svg';
 var GRAY_ICON = './images/icon-gray.svg';
 
 var parkMap = {

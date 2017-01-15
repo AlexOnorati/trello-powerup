@@ -194,7 +194,9 @@ TrelloPowerUp.initialize({
     return [{
       icon: WHITE_ICON,
       text: 'Generate',
-      callback: boardButtonCallback
+      callback: function(t){
+        alert('test');
+      }
     }];
   },
   'card-badges': function(t, options){

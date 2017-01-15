@@ -195,7 +195,7 @@ TrelloPowerUp.initialize({
       icon: WHITE_ICON,
       text: 'Generate',
       callback: function(t){
-        alert('test');
+        console.log('test');
       }
     }];
   },

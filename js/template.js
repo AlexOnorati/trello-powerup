@@ -122,7 +122,6 @@ var cardButtonCallback = function(t){
         })
       }
     };
-  });
 
   return t.popup({
     title: 'Popup Search Example',

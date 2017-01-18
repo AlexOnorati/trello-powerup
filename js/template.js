@@ -152,16 +152,12 @@ TrelloPowerUp.initialize({
         }
     }];
   },
-  'card-buttons': function(t, options){
-  return [{
-    icon: './images/logo.png',
-    text: 'Button Text',
-    callback: function(t){
-      return t.popup({
-        title: "Card Button Popup",
-        url: './card-button-popup.html'
-      });
+  'card-badges': function(t, card) {
+  return [
+    {
+      icon: './images/logo.png',
+      text: '3'
     }
-  }];
+  ];
 }
 });

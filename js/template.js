@@ -162,11 +162,11 @@ TrelloPowerUp.initialize({
         color: badgeColor,
         refresh: 10
       }
-    },
-    {
-      icon: './images/logo.png',
-      text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include'
-    }
+    }//,
+    //{
+    //  icon: './images/logo.png',
+    //  text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include'
+    //}
   };
 }
 });

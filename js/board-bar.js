@@ -8,3 +8,7 @@ t.render(function(){
   // you might want to react to, such as new data being
   // stored with t.set()
 });
+
+$('create-slides-btn').on('click', function(){
+  alert('Creating Slides!');
+});

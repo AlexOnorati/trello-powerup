@@ -153,7 +153,7 @@ TrelloPowerUp.initialize({
     }];
   },
   'card-badges': function(t, card) {
-  return [
+  return {
     dynamic: function(){
       return {
         title: 'Detail Badge', // for detail badges only
@@ -167,6 +167,6 @@ TrelloPowerUp.initialize({
       icon: './images/logo.png',
       text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include'
     }
-  ];
+  };
 }
 });

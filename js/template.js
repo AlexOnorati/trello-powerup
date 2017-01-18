@@ -170,7 +170,8 @@ TrelloPowerUp.initialize({
     icon: './images/logo.png',
     text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
     callback: function(t){
-      t.set('card', 'shared','toggle', t.get('toggle') == null || t.get('toggle') ? true : false)
+      alert('toggle slide');
+      t.set('card', 'shared','toggle', t.get('toggle') == null || t.get('toggle') ? true : false);
     }
   }];
 }

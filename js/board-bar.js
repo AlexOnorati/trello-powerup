@@ -9,6 +9,6 @@ t.render(function(){
   // stored with t.set()
 });
 
-$('create-slides-btn').on('click', function(){
+$('#create-slides-btn').on('click', function(){
   alert('Creating Slides!');
 });

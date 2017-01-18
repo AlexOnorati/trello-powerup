@@ -156,7 +156,7 @@ TrelloPowerUp.initialize({
   return [
     {
       icon: './images/logo.png',
-      text:  t.get('toggle') == null || !t.get('toggle') ?'disclude' : 'include'
+      text:  t.get('toggle') == null || t.get('toggle') ?'disclude' : 'include'
     }
   ];
 }

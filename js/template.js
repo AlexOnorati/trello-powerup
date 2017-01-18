@@ -1,6 +1,6 @@
 /* global TrelloPowerUp */
 
-var WHITE_ICON = './images/icon-gray.svg';
+var WHITE_ICON = './images/logo.png';
 var GRAY_ICON = './images/icon-gray.svg';
 
 var parkMap = {
@@ -145,8 +145,15 @@ TrelloPowerUp.initialize({
       icon: WHITE_ICON,
       text: 'Generate',
       callback: function(t){
-        console.log('test');
-      }
+          return t.boardBar({
+            url: './board-bar.html',
+            height: 200,
+            args: { example: 1042 }
+          })
+          .then(function(){
+            return t.closePopup();
+          });
+        }
     }];
   }
 });

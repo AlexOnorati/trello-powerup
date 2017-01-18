@@ -171,6 +171,7 @@ TrelloPowerUp.initialize({
     text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
     callback: function(t){
       console.log(t.get('toggle'));
+      t.set('card', 'shared','toggle', true);
       t.set('card', 'shared','toggle', t.get('toggle') == null || t.get('toggle') ? true : false);
     }
   }];

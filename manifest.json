@@ -10,7 +10,7 @@
     "callback",
     "board-buttons",
     "card-badges",
-    "attachment-sections"
+    "card-buttons"
   ],
   "connectors": {
     "iframe": {

@@ -155,8 +155,8 @@ TrelloPowerUp.initialize({
   'card-badges': function(t, card) {
   return [
     {
-      icon: t.get('toggle') == null || !t.get('toggle') ?'./images/logo.png' : './images/icon-gray.svg',
-      text:  ''
+      icon: './images/logo.png',
+      text:  t.get('toggle') == null || !t.get('toggle') ?'disclude' : 'include'
     }
   ];
 }

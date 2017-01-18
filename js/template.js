@@ -154,9 +154,18 @@ TrelloPowerUp.initialize({
   },
   'card-badges': function(t, card) {
   return [
+    dynamic: function(){
+      return {
+        title: 'Detail Badge', // for detail badges only
+        text: 'Dynamic ' + (Math.random() * 100).toFixed(0).toString(),
+        icon: icon, // for card front badges only
+        color: badgeColor,
+        refresh: 10
+      }
+    },
     {
       icon: './images/logo.png',
-      text:  t.get('toggle') == null || t.get('toggle') ?'disclude' : 'include'
+      text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include'
     }
   ];
 }

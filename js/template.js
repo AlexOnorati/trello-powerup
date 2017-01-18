@@ -111,15 +111,12 @@ var boardButtonCallback = function(t){
     ]
   });*/
 };
-
 var cardButtonCallback = function(t){
-  var items = Object.keys(parkMap).map(function(parkCode){
-    var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
+
     return {
-      text: parkMap[parkCode],
-      url: urlForCode,
+      text: 'Include in slides?',
       callback: function(t){
-        return t.attach({ url: urlForCode, name: parkMap[parkCode] })
+        return t.set('card','shared','toggle',!t.get('toggle'))
         .then(function(){
           return t.closePopup();
         })

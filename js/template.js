@@ -164,5 +164,19 @@ TrelloPowerUp.initialize({
       }
     }
   };
+},
+'attachment-sections': function(t, options) {
+  return [
+    {
+      icon: './images/logo.png',
+      title: "Attachment Section",
+      claimed: [arrayOfClaimedAttachments],
+      content: {
+        type: 'iframe',
+        url: t.signUrl('./section.html')
+      }
+
+    }
+  ];
 }
 });

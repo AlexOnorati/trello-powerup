@@ -170,7 +170,7 @@ TrelloPowerUp.initialize({
     icon: './images/logo.png',
     text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
     callback: function(t){
-      console.log(t.get('toggle'));
+      console.log(t);
       t.set('card', 'shared','toggle', true);
       t.set('card', 'shared','toggle', t.get('toggle') == null || t.get('toggle') ? true : false);
     }

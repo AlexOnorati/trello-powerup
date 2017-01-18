@@ -165,18 +165,12 @@ TrelloPowerUp.initialize({
     }
   };
 },
-'attachment-sections': function(t, options) {
-  return [
-    {
-      icon: './images/logo.png',
-      title: "Attachment Section",
-      claimed: [arrayOfClaimedAttachments],
-      content: {
-        type: 'iframe',
-        url: t.signUrl('./section.html')
-      }
-
+'card-buttons':function(t, options){
+  return [{
+    icon: './images/logo.png',
+    text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
+    callback: function(t){
+      t.set('casrd', 'shared','toggle', t.get('toggle') == null || t.get('toggle') ? true : false)
     }
-  ];
-}
+  }];
 });

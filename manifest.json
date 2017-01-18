@@ -9,7 +9,7 @@
   "capabilities": [
     "callback",
     "board-buttons",
-    "card-buttons"
+    "card-badges"
   ],
   "connectors": {
     "iframe": {

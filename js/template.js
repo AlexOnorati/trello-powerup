@@ -143,7 +143,7 @@ TrelloPowerUp.initialize({
         callback: function(t){
           return t.popup({
             title: 'Popup Search Example',
-            items: items,
+            //items: items,
             search: {
               count: 5,
               placeholder: 'Search National Parks',

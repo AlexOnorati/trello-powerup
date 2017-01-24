@@ -156,10 +156,10 @@ TrelloPowerUp.initialize({
     return t.card('name').then(function(promiseResult){
       var name = promiseResult.name;
       return t.get('card','shared','toggle','T').then(function(promiseGetResult){
-        console.log(promiseGetResult);
+
         return {
           title: 'Detail Badge', // for detail badges only
-          text:  name,
+          text:  promiseGetResult,
 
           //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
           icon: './images/logo.png', // for card front badges only

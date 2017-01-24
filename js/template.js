@@ -187,7 +187,7 @@ TrelloPowerUp.initialize({
   //};
 },
 'card-buttons':function(t, options){
-  t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
+  return t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
     return [{
       icon: './images/logo.png',
       text:  'F' == 'F'?'exclude' : 'include',

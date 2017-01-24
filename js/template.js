@@ -141,7 +141,7 @@ TrelloPowerUp.initialize({
       icon: WHITE_ICON,
       text: 'Generate',
         callback: function(t){
-          return t.popup({
+          return t.boardBar({
             height: 200,
             args: { example: 1042 }
           });
@@ -168,6 +168,7 @@ TrelloPowerUp.initialize({
     icon: './images/logo.png',
     text:  (t.get('card', 'shared','toggle', 'T') == null || t.get('card', 'shared','toggle', 'T')) ?'exclude' : 'include',
     callback: function(t){
+      t.card('id', 'name', 'url').then(function(promiseResult){console.log(promiseResult)});
       console.log(t.get('card', 'shared','toggle', true));
       t.set('card', 'shared','toggle', true);
       t.set('card', 'shared','toggle', t.get('card', 'shared','toggle', 'T') == null || t.get('card', 'shared','toggle', 'T') ? 'T' : 'F');

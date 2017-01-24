@@ -159,7 +159,7 @@ TrelloPowerUp.initialize({
       t.card('name')
       .then(function(promiseResult){
         name = promiseResult.name;
-      }),
+      });
       return {
         title: 'Detail Badge', // for detail badges only
         text:  name,

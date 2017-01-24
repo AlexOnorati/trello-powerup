@@ -141,7 +141,9 @@ TrelloPowerUp.initialize({
       icon: WHITE_ICON,
       text: 'Generate',
         callback: function(t){
-          return t.boardBar({
+          return t.popup({
+            icon: WHITE_ICON,
+            text: 'Generate',
             height: 200,
             args: { example: 1042 }
           });

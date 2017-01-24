@@ -187,7 +187,7 @@ TrelloPowerUp.initialize({
   //};
 },
 'card-buttons':function(t, options){
-  t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
+  //t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
     return [{
       icon: './images/logo.png',
       text:  promiseResult == 'F'?'exclude' : 'include',
@@ -199,7 +199,7 @@ TrelloPowerUp.initialize({
         }
       }
       }];
-    });
+    //});
   }
 
 

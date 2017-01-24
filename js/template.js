@@ -152,6 +152,7 @@ TrelloPowerUp.initialize({
             return t.closePopup();
           });
         }
+      }
     }];
   },
   'card-badges': function(t, card) {

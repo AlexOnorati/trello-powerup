@@ -166,7 +166,7 @@ TrelloPowerUp.initialize({
 
           refresh: 10
         };
-      })
+      });
     });
   // return {
   //   dynamic: function(){

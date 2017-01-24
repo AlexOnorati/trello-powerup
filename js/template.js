@@ -154,15 +154,19 @@ TrelloPowerUp.initialize({
   },
   'card-badges': function(t, card) {
     return t.card('name').then(function(promiseResult){
-      return {
-        title: 'Detail Badge', // for detail badges only
-        text:  promiseResult.name,
+      var name = promiseResult.name;
+      return t.get('card','shared','toggle','T').then(function(promiseGetResult){
+        console.log(promiseGetResult);
+        return {
+          title: 'Detail Badge', // for detail badges only
+          text:  name,
 
-        //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
-        icon: './images/logo.png', // for card front badges only
+          //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
+          icon: './images/logo.png', // for card front badges only
 
-        refresh: 10
-      };
+          refresh: 10
+        };
+      })
     });
   // return {
   //   dynamic: function(){

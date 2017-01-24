@@ -162,7 +162,7 @@ TrelloPowerUp.initialize({
           console.log(promiseResult);
           console.log(promiseResult.name)
           return promiseResult.name;
-        }),
+        }).name,
 
         //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
         icon: './images/logo.png', // for card front badges only

@@ -192,7 +192,7 @@ TrelloPowerUp.initialize({
       icon: './images/logo.png',
       text:  'F' == 'F'?'exclude' : 'include',
       callback: function(t){
-        if(promiseResult == 'T'){
+        if('T' == 'T'){
           t.set('card', 'shared','toggle', 'F');
         }else{
           t.set('card', 'shared','toggle', 'T');

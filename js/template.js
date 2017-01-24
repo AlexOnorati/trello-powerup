@@ -190,7 +190,7 @@ TrelloPowerUp.initialize({
   //t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
     return [{
       icon: './images/logo.png',
-      text:  promiseResult == 'F'?'exclude' : 'include',
+      text:  'F' == 'F'?'exclude' : 'include',
       callback: function(t){
         if(promiseResult == 'T'){
           t.set('card', 'shared','toggle', 'F');

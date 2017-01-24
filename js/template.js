@@ -195,14 +195,12 @@ TrelloPowerUp.initialize({
         if(promiseResult == 'T'){
           t.set('card', 'shared','toggle', 'F');
         }else{
-          t.set('card', 'shared','toggle', 'F');
+          t.set('card', 'shared','toggle', 'T');
         }
       }
       }];
-    }
-
-  );
-}
+    });
+  }
 
 
 });

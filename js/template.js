@@ -140,8 +140,6 @@ TrelloPowerUp.initialize({
     return [{
       icon: WHITE_ICON,
       text: 'Generate',
-      callback: function(t) {
-        text: 'Open Board Bar',
         callback: function(t){
           return t.boardBar({
             url: './board-bar.html',
@@ -152,7 +150,7 @@ TrelloPowerUp.initialize({
             return t.closePopup();
           });
         }
-      }
+
     }];
   },
   'card-badges': function(t, card) {

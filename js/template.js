@@ -187,15 +187,20 @@ TrelloPowerUp.initialize({
   //};
 },
 'card-buttons':function(t, options){
-  return [{
-    icon: './images/logo.png',
-    text:  (t.get('card', 'shared','toggle', 'T') == null || t.get('card', 'shared','toggle', 'T')) ?'exclude' : 'include',
-    callback: function(t){
-      t.card('id', 'name', 'url').then(function(promiseResult){console.log(promiseResult)});
-      console.log(t.get('card', 'shared','toggle', true));
-      t.set('card', 'shared','toggle', true);
-      t.set('card', 'shared','toggle', t.get('card', 'shared','toggle', 'T') == null || t.get('card', 'shared','toggle', 'T') ? 'T' : 'F');
-    }
+  t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
+    return [{
+      icon: './images/logo.png',
+      text:  promiseResult == 'F'?'exclude' : 'include',
+      callback: function(t){
+        if(promiseResult == 'T'){
+          t.set('card', 'shared','toggle', 'F');
+        }else{
+          t.set('card', 'shared','toggle', 'F');
+        }
+      }
+  );
+}
+
   }];
 }
 });

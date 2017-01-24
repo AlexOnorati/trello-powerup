@@ -155,14 +155,14 @@ TrelloPowerUp.initialize({
   'card-badges': function(t, card) {
   return {
     dynamic: function(){
+      var name;
+      t.card('name')
+      .then(function(promiseResult){
+        name = promiseResult.name;
+      }),
       return {
         title: 'Detail Badge', // for detail badges only
-        text:  t.card('name')
-        .then(function(promiseResult){
-          console.log(promiseResult);
-          console.log(promiseResult.name)
-          return promiseResult.name;
-        }).name,
+        text:  name,
 
         //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
         icon: './images/logo.png', // for card front badges only

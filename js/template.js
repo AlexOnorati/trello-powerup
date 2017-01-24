@@ -157,7 +157,9 @@ TrelloPowerUp.initialize({
     dynamic: function(){
       return {
         title: 'Detail Badge', // for detail badges only
-        text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
+        text:  t.card('name').then(function(promiseResult){promiseResult.name});
+
+        //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
         icon: './images/logo.png', // for card front badges only
 
         refresh: 10

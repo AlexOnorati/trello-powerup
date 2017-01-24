@@ -156,10 +156,9 @@ TrelloPowerUp.initialize({
   return {
     dynamic: function(){
       var name;
-      console.log(t.card('name'));
-    //  .then(function(promiseResult){
-      //  name = promiseResult.name;
-      //});
+      console.log(t.card('name').then(function(promiseResult){
+        return promiseResult.name;
+      }));
       return {
         title: 'Detail Badge', // for detail badges only
         text:  'test',

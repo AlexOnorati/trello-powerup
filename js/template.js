@@ -144,7 +144,7 @@ TrelloPowerUp.initialize({
           return t.popup({
             height: 200,
             args: { example: 1042 }
-          })
+          });
 
         }
 

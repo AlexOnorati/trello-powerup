@@ -142,10 +142,13 @@ TrelloPowerUp.initialize({
       text: 'Generate',
         callback: function(t){
           return t.popup({
-            icon: WHITE_ICON,
-            text: 'Generate',
-            height: 200,
-            args: { example: 1042 }
+            title: 'Popup Search Example',
+            items: items,
+            search: {
+              count: 5,
+              placeholder: 'Search National Parks',
+              empty: 'No parks found'
+            }
           });
 
         }

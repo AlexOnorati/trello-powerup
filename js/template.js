@@ -168,11 +168,11 @@ TrelloPowerUp.initialize({
 'card-buttons':function(t, options){
   return [{
     icon: './images/logo.png',
-    text:  t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
+    text:  t.get('card', 'shared','toggle', true) == null || t.get('card', 'shared','toggle', true) ?'exclude' : 'include',
     callback: function(t){
       console.log(t);
       t.set('card', 'shared','toggle', true);
-      t.set('card', 'shared','toggle', t.get('toggle') == null || t.get('toggle') ? true : false);
+      t.set('card', 'shared','toggle', t.get('card', 'shared','toggle', true) == null || t.get('card', 'shared','toggle', true) ? true : false);
     }
   }];
 }

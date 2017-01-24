@@ -159,7 +159,7 @@ TrelloPowerUp.initialize({
 
         return {
           title: 'Detail Badge', // for detail badges only
-          text:  promiseGetResult,
+          text:  promiseGetResult == 'F'?'exclude' : 'include',
 
           //t.get('toggle') == null || t.get('toggle') ?'exclude' : 'include',
           icon: './images/logo.png', // for card front badges only
@@ -190,9 +190,9 @@ TrelloPowerUp.initialize({
   return t.get('card', 'shared','toggle', 'T').then(function(promiseResult){
     return [{
       icon: './images/logo.png',
-      text:  'F' == 'F'?'exclude' : 'include',
+      text:  promiseResult == 'F'?'exclude' : 'include',
       callback: function(t){
-        if('T' == 'T'){
+        if(promiseResult == 'T'){
           t.set('card', 'shared','toggle', 'F');
         }else{
           t.set('card', 'shared','toggle', 'T');

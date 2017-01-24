@@ -198,9 +198,11 @@ TrelloPowerUp.initialize({
           t.set('card', 'shared','toggle', 'F');
         }
       }
+      }];
+    }
+
   );
 }
 
-  }];
-}
+
 });

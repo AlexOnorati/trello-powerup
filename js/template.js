@@ -79,21 +79,21 @@ var formatNPSUrl = function(t, url){
   }
 };
 
-module.exports = function(t) {
-  return t.popup({
-    title: 'Dropbox',
-    items: [
-      {
-        text: "Attach a File…",
-        callback: attachFile
-      },
-      {
-        text: "Attach a Folder…",
-        callback: attachFolder
-      }
-    ]
-  });
-}
+// module.exports = function(t) {
+//   return t.popup({
+//     title: 'Dropbox',
+//     items: [
+//       {
+//         text: "Attach a File…",
+//         callback: attachFile
+//       },
+//       {
+//         text: "Attach a Folder…",
+//         callback: attachFolder
+//       }
+//     ]
+//   });
+// }
 
 var boardButtonCallback = function(t){
   alert('Slides!');

@@ -158,7 +158,7 @@ TrelloPowerUp.initialize({
       text: 'Generate',
         callback: function(t){
           return t.popup({
-        title: "Card Button Popup",
+        title: "Generate Slides",
         url: './board-button-popup.html'
       });
 

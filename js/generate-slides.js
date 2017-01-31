@@ -1,6 +1,11 @@
 var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
+var selectList = document.getElementById('lists');
+var trelloLists = t.lists;
+console.log(trelloLists);
+//for(let i = 0; i < trelloLists.)
+
 function GenerateSlides(){
   var pptx = new PptxGenJS();
   var slide = pptx.addNewSlide();

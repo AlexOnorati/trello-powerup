@@ -1,7 +1,7 @@
 var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
-var selectList = document.getElementById('lists');
+var selectList = document.getElementById('list');
 t.lists('id','name').then(function(promiseResult){
   selectList.clear();
   for(let i = 0; i < promiseResult.length; i++){

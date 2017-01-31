@@ -2,9 +2,16 @@ var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
 var selectList = document.getElementById('lists');
-t.lists('id','name').then(function(promiseResult){console.log(promiseResult)});;
+t.lists('id','name').then(function(promiseResult){
+  selectList.clear();
+  for(let i = 0; i < promiseResult.length; i++){
 
-//for(let i = 0; i < trelloLists.)
+    var option = document.createElement('option');
+    option.appendChild( document.createTextNode(promiseResult[i].name) );
+    option.value = promiseResult[i].id;
+    selectList.appendChild(option);
+  }
+});;
 
 function GenerateSlides(){
   var pptx = new PptxGenJS();

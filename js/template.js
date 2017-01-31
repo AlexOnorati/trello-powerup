@@ -158,14 +158,9 @@ TrelloPowerUp.initialize({
       text: 'Generate',
         callback: function(t){
           return t.popup({
-            title: 'Popup Search Example',
-            //items: items,
-            search: {
-              count: 5,
-              placeholder: 'Search National Parks',
-              empty: 'No parks found'
-            }
-          });
+        title: "Card Button Popup",
+        url: './board-button-popup.html'
+      });
 
         }
 

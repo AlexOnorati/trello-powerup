@@ -2,7 +2,7 @@ var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
 var selectList = document.getElementById('lists');
-var trelloLists = t.lists;
+var trelloLists = t.lists('id','name');
 console.log(trelloLists);
 //for(let i = 0; i < trelloLists.)
 

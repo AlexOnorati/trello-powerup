@@ -4,6 +4,9 @@ var t = TrelloPowerUp.iframe();
 var selectList = document.getElementById('list');
 t.lists('id','name').then(function(promiseResult){
   //selectList.empty();
+  if(promiseResult.length == 0){
+    selectList.hide();
+  }else{
   for(let i = 0; i < promiseResult.length; i++){
 
     var option = document.createElement('option');
@@ -11,6 +14,7 @@ t.lists('id','name').then(function(promiseResult){
     option.value = promiseResult[i].id;
     selectList.appendChild(option);
   }
+}
 });;
 
 function GenerateSlides(){

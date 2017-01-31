@@ -21,4 +21,5 @@ var slideBtn = document.getElementById('create-slides-btn');
 slideBtn.addEventListener('click', function() {
   alert('Generate Slides!');
   GenerateSlides();
+  alert('Slides have been generated');
 });

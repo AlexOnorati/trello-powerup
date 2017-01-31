@@ -153,6 +153,10 @@ var cardButtonCallback = function(t){
 TrelloPowerUp.initialize({
 
   'board-buttons': function(t, options){
+    var authBtn = document.getElementById('create-slides-btn');
+authBtn.addEventListener('click', function() {
+  alert('boom');
+});
     return [{
       icon: WHITE_ICON,
       text: 'Generate',

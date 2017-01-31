@@ -1,3 +1,11 @@
+var Promise = TrelloPowerUp.Promise;
+var t = TrelloPowerUp.iframe();
+
+var authBtn = document.getElementById('create-slides-btn');
+authBtn.addEventListener('click', function() {
+  alert('Generate Slides!');
+});
+
 function GenerateSlides(){
   var pptx = new PptxGenJS();
   var slide = pptx.addNewSlide();

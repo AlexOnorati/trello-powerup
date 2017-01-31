@@ -8,3 +8,16 @@ t.render(function(){
   // you might want to react to, such as new data being
   // stored with t.set()
 });
+
+
+var slideBtn = document.getElementById('create-slides-btn');
+slideBtn.addEventListener('click', function() {
+  alert('Generate Slides!');
+});
+
+function GenerateSlides(){
+  var pptx = new PptxGenJS();
+  var slide = pptx.addNewSlide();
+  slide.addText('Hello world!', { x:1.0, y:1.0, font_size:42, color:'00FF00' });
+  pptx.save('Demo-Simple');
+}

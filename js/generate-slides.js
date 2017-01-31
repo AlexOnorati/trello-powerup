@@ -2,8 +2,8 @@ var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
 var selectList = document.getElementById('lists');
-var trelloLists = t.lists('id','name');
-console.log(trelloLists);
+t.lists('id','name').then(function(promiseResult){console.log(promiseResult)});;
+
 //for(let i = 0; i < trelloLists.)
 
 function GenerateSlides(){

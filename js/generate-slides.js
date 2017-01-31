@@ -5,7 +5,7 @@ var selectList = document.getElementById('list');
 t.lists('id','name').then(function(promiseResult){
   //selectList.empty();
   if(promiseResult.length == 0){
-    selectList.hide();
+    //selectList.hide();
   }else{
   for(let i = 0; i < promiseResult.length; i++){
 

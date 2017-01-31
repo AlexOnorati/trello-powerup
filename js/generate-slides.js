@@ -3,7 +3,7 @@ var t = TrelloPowerUp.iframe();
 
 var selectList = document.getElementById('list');
 t.lists('id','name').then(function(promiseResult){
-  selectList.clear();
+  selectList.empty();
   for(let i = 0; i < promiseResult.length; i++){
 
     var option = document.createElement('option');

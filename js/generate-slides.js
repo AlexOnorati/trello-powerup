@@ -25,11 +25,11 @@ function GenerateSlides(){
         if(promiseResult[i].idList == selectList.options[selectList.selectedIndex].value){
           var slide = pptx.addNewSlide();
           if(promiseResult[i].name != null || promiseResult[i].name != ""){
-            slide.addText(promiseResult[i].name, { x:1.0, y:1.0, font_size:42, color:'000000' });
+            slide.addText("Name: " + promiseResult[i].name, { x:1.0, y:1.0, font_size:42, color:'000000' });
           }
           if(promiseResult[i].desc != null || promiseResult[i].desc != ""||promiseResult[i].desc != ''){
             console.log(promiseResult[i].desc);
-            slide.addText(promiseResult[i].desc + "/n", { x:1.0, y:2.0, font_size:24, color:'000000' });
+            slide.addText("desc: " + promiseResult[i].desc, { x:1.0, y:2.0, font_size:24, color:'000000' });
           }
         }
       }

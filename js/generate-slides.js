@@ -29,7 +29,7 @@ function GenerateSlides(){
           }
           if(promiseResult[i].desc != null || promiseResult[i].desc != ""||promiseResult[i].desc != ''){
             console.log(promiseResult[i].desc);
-            slide.addText(promiseResult[i].desc, { x:1.0, y:2.0, font_size:24, color:'000000' });
+            slide.addText(promiseResult[i].desc + "/n", { x:1.0, y:2.0, font_size:24, color:'000000' });
           }
         }
       }

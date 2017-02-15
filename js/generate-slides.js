@@ -30,7 +30,7 @@ function GenerateSlides(){
 
           for(let j = 0; j < attachments.length; j++){
             console.log(b64DecodeUnicode(attachments[j].url));
-            slide.addImage({x:9.3, y:4.9, w:0.5, h:0.5, data:"image/png;base64,"+b64DecodeUnicode(attachments[j].url)});
+            slide.addImage({x:9.3, y:4.9, w:0.5, h:0.5, data:"image/png;base64,"+getImage(attachments[j].url)});
           }
         }
       }
@@ -41,8 +41,29 @@ function GenerateSlides(){
 
 }
 
-function b64DecodeUnicode(str) {
-    return new Blob([str], {type:"image/png"});
+function getImage(oldURL) {
+  // Simulate a call to Dropbox or other service that can
+// return an image as an ArrayBuffer.
+var xhr = new XMLHttpRequest();
+
+// Use JSFiddle logo as a sample image to avoid complicating
+// this example with cross-domain issues.
+xhr.open( "GET", oldURL, true );
+
+// Ask for the result as an ArrayBuffer.
+xhr.responseType = "arraybuffer";
+
+xhr.onload = function( e ) {
+  // Obtain a blob: URL for the image data.
+  var arrayBufferView = new Uint8Array( this.response );
+  var blob = new Blob( [ arrayBufferView ], { type: "image/png" } );
+  var urlCreator = window.URL || window.webkitURL;
+  var imageUrl = urlCreator.createObjectURL( blob );
+  console.log(imageUrl);
+  return imageUrl;
+};
+
+xhr.send();
 }
 
 

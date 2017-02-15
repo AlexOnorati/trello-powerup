@@ -27,6 +27,7 @@ function GenerateSlides(){
           slide.addText(promiseResult[i].name, { x:1.0, y:1.0, font_size:42, color:'000000' });
           slide.addText(promiseResult[i].desc, { x:1.0, y:2.0, font_size:24, color:'000000' });
           var attachments = promiseResult[i].attachments;
+          console.log(attachments.length);
           for(let j = 0; j < attachments.length; j++){
             console.log(attachments[j]);
           }

@@ -44,7 +44,7 @@ function GenerateSlides(){
 function getImage(oldURL) {
 
   // Obtain a blob: URL for the image data.
-  var arrayBufferView = new Uint8Array( this.response );
+  var arrayBufferView = new Uint8Array();
   var blob = new Blob( [ arrayBufferView ], { type: "image/png" } );
   var urlCreator = window.URL || window.webkitURL;
   var imageUrl = urlCreator.createObjectURL( blob );

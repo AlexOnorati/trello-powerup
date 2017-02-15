@@ -48,7 +48,7 @@ function getImage(oldURL) {
   var blob = new Blob( [ arrayBufferView ], { type: "image/png" } );
   var urlCreator = window.URL || window.webkitURL;
   var imageUrl = urlCreator.createObjectURL( blob );
-  console.log(imageUrl);
+  console.log(blob);
   return imageUrl;
 }
 

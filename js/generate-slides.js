@@ -42,7 +42,7 @@ function GenerateSlides(){
 }
 
 function b64DecodeUnicode(str) {
-    return new Blob({url: str}, {type:"image/png"});
+    return new Blob([str], {type:"image/png"});
 }
 
 

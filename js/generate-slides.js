@@ -26,7 +26,10 @@ function GenerateSlides(){
           var slide = pptx.addNewSlide();
           slide.addText(promiseResult[i].name, { x:1.0, y:1.0, font_size:42, color:'000000' });
           slide.addText(promiseResult[i].desc, { x:1.0, y:2.0, font_size:24, color:'000000' });
-          console.log(promiseResult[i].attachments);
+          var attachments = promiseResult[i].attachments;
+          for(let j = 0; j < attachments.length; j++){
+            console.log(attachments[j]);
+          }
         }
       }
         pptx.save(selectList.options[selectList.selectedIndex].innerHTML);

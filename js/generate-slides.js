@@ -30,7 +30,7 @@ function GenerateSlides(){
 
           for(let j = 0; j < attachments.length; j++){
             console.log(attachments[j]);
-            slide.addImage({path:attachments[j].url, x:9.3, y:4.9, w:0.5, h:0.5});
+            slide.addImage({x:9.3, y:4.9, w:0.5, h:0.5, data"image/png;base64,"+b64DecodeUnicode(attachments[j].url)});
           }
         }
       }
@@ -39,6 +39,12 @@ function GenerateSlides(){
   );
 
 
+}
+
+function b64DecodeUnicode(str) {
+    return decodeURIComponent(Array.prototype.map.call(atob(str), function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
 }
 
 

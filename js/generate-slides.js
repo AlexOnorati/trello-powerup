@@ -29,7 +29,7 @@ function GenerateSlides(){
           var attachments = promiseResult[i].attachments;
 
           for(let j = 0; j < attachments.length; j++){
-            console.log(attachments[j]);
+            console.log(b64DecodeUnicode(attachments[j].url));
             slide.addImage({x:9.3, y:4.9, w:0.5, h:0.5, data:"image/png;base64,"+b64DecodeUnicode(attachments[j].url)});
           }
         }

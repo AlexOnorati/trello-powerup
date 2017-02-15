@@ -19,6 +19,7 @@ t.lists('id','name').then(function(promiseResult){
 
 function GenerateSlides(){
   var pptx = new PptxGenJS();
+  console.log(t.iframe());
   t.cards('name', 'desc', 'idList').then(
     function(promiseResult){
       for(let i = 0; i < promiseResult.length; i++){

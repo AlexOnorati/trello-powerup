@@ -19,7 +19,7 @@ t.lists('id','name').then(function(promiseResult){
 
 function GenerateSlides(){
   var pptx = new PptxGenJS();
-  t.cards('name', 'desc', 'idList', 'attachments').then(
+  t.cards('name', 'desc', 'idList').then(
     function(promiseResult){
       for(let i = 0; i < promiseResult.length; i++){
         if(promiseResult[i].idList == selectList.options[selectList.selectedIndex].value){
